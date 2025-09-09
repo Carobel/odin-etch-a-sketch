@@ -1,0 +1,14 @@
+body {
+    margin: 40px;
+}
+
+#canvas {
+    border-style: solid;
+}
+
+.pixel {
+    width: 30px;
+    height: 30px;
+    border-style: solid;
+    border-width: 1px;
+}
