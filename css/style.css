@@ -1,14 +1,25 @@
 body {
-    margin: 40px;
+    margin: 100px;
+}
+
+#page-title {
+    text-align: center;
 }
 
 #canvas {
+    width: 50%;
+    margin: auto;
     border-style: solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
 }
 
 .pixel {
-    width: 30px;
+    background-color: grey;
     height: 30px;
-    border-style: solid;
-    border-width: 1px;
+    flex: 1 0 auto;
 }
