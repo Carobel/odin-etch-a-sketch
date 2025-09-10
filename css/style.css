@@ -4,6 +4,7 @@ body {
 
 #page-title {
     text-align: center;
+    font-family: "Dejavu Sans", sans-serif;
 }
 
 #canvas {
@@ -43,6 +44,7 @@ button {
     background-color: rgb(140,150,140);
     color: white;
     font-size: 20px;
+    font-family: "Dejavu Sans", sans-serif;
     border-style: none;
     border-radius: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
