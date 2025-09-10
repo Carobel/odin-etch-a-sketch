@@ -1,5 +1,5 @@
 const btnClear = document.querySelector('#clear');
-const btnChangeSize = document.querySelector('change-size');
+const btnChangeSize = document.querySelector('#change-size');
 const canvas = document.querySelector('#canvas');
 
 // create a canvas of pixels, the pixels are divs organized in rows
@@ -32,15 +32,22 @@ function clearPixels() {
 
 // handle mouse hover over canvas pixels
 canvas.addEventListener('mouseover', (event) => {
-    let targetID = '#' + event.target.id;
+    const targetID = '#' + event.target.id;
     targetPixel = document.querySelector(targetID);
     colorPixel(targetPixel);
 });
 
-// handle delete button
+// handle clear button
 btnClear.addEventListener('click', () => {
     clearPixels();
     createPixels();
+});
+
+// handle change size button
+btnChangeSize.addEventListener('click', () => {
+    const input = Number(prompt('Specify a size:'));
+    clearPixels();
+    createPixels(input);
 });
 
 
