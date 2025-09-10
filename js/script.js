@@ -45,9 +45,13 @@ btnClear.addEventListener('click', () => {
 
 // handle change size button
 btnChangeSize.addEventListener('click', () => {
-    const input = Number(prompt('Specify a size:'));
+    const input = prompt('Specify a size:');
+    let size = Number(input);
+    if (size > 100) {
+        size = 100;
+    }
     clearPixels();
-    createPixels(input);
+    createPixels(size);
 });
 
 
