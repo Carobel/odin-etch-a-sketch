@@ -1,9 +1,10 @@
 const btnClear = document.querySelector('#clear');
 const btnChangeSize = document.querySelector('#change-size');
 const canvas = document.querySelector('#canvas');
+let size = 16;
 
 // create a canvas of pixels, the pixels are divs organized in rows
-function createPixels(size = 16) {
+function createPixels() {
     // create row: container for one row of pixels
     for(let x = 0; x < size; x++) {
         const row = document.createElement('div');
@@ -48,12 +49,12 @@ btnClear.addEventListener('click', () => {
 // handle change size button
 btnChangeSize.addEventListener('click', () => {
     const input = prompt('Specify a size:');
-    let size = Number(input);
+    size = Number(input);
     if (size > 100) {
         size = 100;
     }
     clearPixels();
-    createPixels(size);
+    createPixels();
 });
 
 
