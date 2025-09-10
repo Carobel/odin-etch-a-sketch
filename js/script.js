@@ -1,18 +1,17 @@
-SIZE = 16;
 const btnClear = document.querySelector('#clear');
 const btnChangeSize = document.querySelector('change-size');
 const canvas = document.querySelector('#canvas');
 
 // create a canvas of pixels, the pixels are divs organized in rows
-function createPixels() {
+function createPixels(size = 16) {
     // create row: container for one row of pixels
-    for(let x = 0; x < SIZE; x++) {
+    for(let x = 0; x < size; x++) {
         const row = document.createElement('div');
         row.classList.add('row');
         canvas.appendChild(row);
         
         // create pixel: a pixel here is a div-element with the grid coordinates as ID (e.g. 'pixel-1-1')
-        for(let y = 0; y < SIZE; y++) {
+        for(let y = 0; y < size; y++) {
             const pixel = document.createElement('div');
             pixel.classList.add('pixel');
             pixel.id = `pixel-${String(x)}-${String(y)}`
