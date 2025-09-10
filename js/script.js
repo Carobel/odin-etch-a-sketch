@@ -1,8 +1,10 @@
 SIZE = 16;
+const btnClear = document.querySelector('#clear');
+const btnChangeSize = document.querySelector('change-size');
+const canvas = document.querySelector('#canvas');
 
 // create a canvas of pixels, the pixels are divs organized in rows
 function createPixels() {
-    canvas = document.querySelector('#canvas');
     // create row: container for one row of pixels
     for(let x = 0; x < SIZE; x++) {
         const row = document.createElement('div');
@@ -19,16 +21,28 @@ function createPixels() {
     }
 }
 
-// handle mouse hover
+// color pixel
+function colorPixel(pixel) {
+    pixel.classList.add("filled");
+}
+
+// clear all pixels
+function clearPixels() {
+    canvas.textContent = '';
+}
+
+// handle mouse hover over canvas pixels
 canvas.addEventListener('mouseover', (event) => {
     let targetID = '#' + event.target.id;
     targetPixel = document.querySelector(targetID);
     colorPixel(targetPixel);
 });
 
-// color pixel
-function colorPixel(pixel) {
-    pixel.classList.add("filled");
-}
+// handle delete button
+btnClear.addEventListener('click', () => {
+    clearPixels();
+    createPixels();
+});
+
 
 createPixels();
