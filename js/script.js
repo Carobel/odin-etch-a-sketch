@@ -33,8 +33,10 @@ function clearPixels() {
 // handle mouse hover over canvas pixels
 canvas.addEventListener('mouseover', (event) => {
     const targetID = '#' + event.target.id;
-    targetPixel = document.querySelector(targetID);
-    colorPixel(targetPixel);
+    if(targetID !== '#canvas') {
+        targetPixel = document.querySelector(targetID);
+        colorPixel(targetPixel);
+    }
 });
 
 // handle clear button
