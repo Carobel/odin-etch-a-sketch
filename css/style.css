@@ -7,21 +7,24 @@ body {
 }
 
 #canvas {
-    width: 50%;
+    width: 500px;
+    height: 500px;
     margin: auto;
-    border-style: solid;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .row {
     display: flex;
+    width: 500px;
+    flex: 1 1 0;
 }
 
 .pixel {
+    height: 20px;
     background-color: rgb(230,230,230);
-    height: 30px;
-    flex: 1 0 auto;
+    flex: 1 1 0;
 }
 
 .filled {
